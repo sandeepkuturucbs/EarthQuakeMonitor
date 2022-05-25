@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardForMap"
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="1.5">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_margin="16dp" />
+    </androidx.cardview.widget.CardView>
+    <Space
+        android:id="@+id/space_view"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        app:layout_constraintTop_toBottomOf="@id/cardForMap"/>
+
+    <TextView
+        android:id="@+id/magnitude_label"
+        style="@style/EarthQuakeDetailsLabel"
+        android:text="@string/label_magnitude"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/space_view" />
+
+    <TextView
+        android:id="@+id/magnitude_value"
+        style="@style/EarthQuakeDetailsLabelValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/magnitude_label"
+        app:layout_constraintTop_toTopOf="@id/magnitude_label"
+        tools:text="4.5" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_magnitude"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="magnitude_label, magnitude_value" />
+
+    <TextView
+        android:id="@+id/date_label"
+        style="@style/EarthQuakeDetailsLabel"
+        android:text="@string/label_date"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/magnitude_label" />
+
+    <TextView
+        android:id="@+id/date_value"
+        style="@style/EarthQuakeDetailsLabelValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/date_label"
+        app:layout_constraintTop_toTopOf="@id/date_label"
+        tools:text="05/24/2022" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="date_value, date_label" />
+
+    <TextView
+        android:id="@+id/time_label"
+        style="@style/EarthQuakeDetailsLabel"
+        android:text="@string/label_time"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/date_label" />
+
+    <TextView
+        android:id="@+id/time_value"
+        style="@style/EarthQuakeDetailsLabelValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/time_label"
+        app:layout_constraintTop_toTopOf="@id/time_label"
+        tools:text="2:00 PM" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="time_label, time_value" />
+
+    <TextView
+        android:id="@+id/place_label"
+        style="@style/EarthQuakeDetailsLabel"
+        android:text="@string/label_place"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/time_label" />
+
+    <TextView
+        android:id="@+id/place_value"
+        style="@style/EarthQuakeDetailsLabelValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/place_label"
+        app:layout_constraintTop_toTopOf="@id/place_label"
+        tools:text="California" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_place"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="place_label, place_label" />
+
+    <TextView
+        android:id="@+id/depth_label"
+        style="@style/EarthQuakeDetailsLabel"
+        android:text="@string/label_depth"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/place_label" />
+
+    <TextView
+        android:id="@+id/depth_value"
+        style="@style/EarthQuakeDetailsLabelValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/depth_label"
+        app:layout_constraintTop_toTopOf="@id/depth_label"
+        tools:text="5.0" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_depth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="depth_label, depth_value" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

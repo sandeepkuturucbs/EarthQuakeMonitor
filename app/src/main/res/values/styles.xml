@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="EarthQuakeDetailsLabel">
+        <item name="android:layout_width">78dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name ="android:layout_marginStart">16dp</item>
+        <item name="android:lines">1</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="EarthQuakeDetailsLabelValue" >
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+</resources>

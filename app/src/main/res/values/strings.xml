@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Earthquake Monitor</string>
+    <string name="lbl_summary">Summary</string>
+    <string name="lbl_detail_view">Detail View</string>
+    <string name="menu_refresh_title">refresh</string>
+
+    <string name="label_magnitude">Magnitude</string>
+    <string name="label_date">Date</string>
+    <string name="label_time">Time</string>
+    <string name="label_place">Place</string>
+    <string name="label_depth">Depth</string>
+    <string name="google_maps_key">AIzaSyCJiy4lo-iuQOc-bffYhXzYKmYi1LXcZP8</string>
+</resources>
